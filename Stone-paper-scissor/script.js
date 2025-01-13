@@ -35,6 +35,8 @@ let score=()=>{
    (option)=> {
     option.addEventListener("click",()=>
     {    let uchoice=option.getAttribute("id");
+        uimg.src="Rockuser.png";
+        compimg.src="Rockcomp.png";
          uimg.classList.add("shakeuser");
          compimg.classList.add("shakecomputer");
         let randidx= Math.floor(3*Math.random());
@@ -61,10 +63,10 @@ let score=()=>{
 function startshaking(uchoice,compchoice) {
     setTimeout(() => {
       uimg.classList.remove('shakeuser'); 
-    compimg.classList.remove('shakecomputer'); // Stop shaking after 3 seconds
+    compimg.classList.remove('shakecomputer'); 
     uimg.src=uchoice+"user.png";
     compimg.src=compchoice+"comp.png";
-      }, 1000); // 3000 milliseconds = 3 seconds
+      }, 1000); 
   }
 let result=(uchoice,compchoice)=>{  
     if(uchoice==="Rock"){
