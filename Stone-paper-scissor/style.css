@@ -1,0 +1,116 @@
+body{
+    background-color:rgba(148, 32, 32, 0.729);
+    color:#3D405B;
+    text-align: center;
+    font-size:30px;
+}
+h2{
+    background-color:#F4F1DE;
+    width: fit-content;
+    border-radius: 15px;
+    margin:0 auto;
+}
+.hand-img{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    gap: 250px;
+    margin-top:100px;
+}
+img{
+    height:150px;
+}
+@keyframes shakeuser {
+    25% { transform: rotate(-50deg); }
+    50% { transform: rotate(10deg); }
+  }
+  @keyframes shakecomputer {
+    25% { transform: rotate(50deg); }
+    50% { transform: rotate(-10deg); }
+  }
+
+
+  .shakeuser {
+    animation: shakeuser 0.5s infinite; /* Shake repeatedly every 0.5 seconds */
+  }
+  .shakecomputer {
+    animation: shakecomputer 0.5s infinite; /* Shake repeatedly every 0.5 seconds */
+  }
+.player1,.player2{
+   height: fit-content;
+}
+.score{
+    display:flex;
+    position: fixed;
+    gap:150px;
+    text-align:start;
+    margin-left:280px;
+}
+.options{
+    margin-top:100px;
+    height:100px;
+    width: 100px;
+    background-color:#F2CC8F;
+    color:#E07A5F;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    margin-inline:30px;
+}
+.options:hover{
+    cursor: pointer;
+    opacity:30%;
+}
+input{
+    display:block;
+    position:fixed;
+    margin-left:350px;
+    margin-top:30px;
+    width:500px;
+    height: 250px;
+    background-color:#F2CC8F;;
+    border-radius: 15px;
+    border:none;
+    font-size: 30px;
+    text-align: center;
+    color: #445b3d;
+}
+ #done{
+    position: absolute;
+    left:45%; 
+    top:480px; 
+    font-size:40px;
+    background-color: skyblue;
+    border-radius: 15px;
+    height: 50px;
+    width: 150px;
+}
+.msg-box{
+    position:fixed;
+    margin-top:80px;
+    margin-left:30px;
+    line-height:50px;
+    padding:80px;
+    background-color:#f2c98f;;
+    border-radius: 15px;
+    border:none;
+    font-size:80px;
+    text-align: center;
+    color: #445b3d;
+}
+.new-game {
+    position: fixed;
+    margin-top:220px;
+    margin-left:200px;
+    background-color: skyblue;
+    border-radius: 15px;
+    height: 50px;
+    text-align: center;
+    font-size:40px;
+    border:2px solid rgb(110, 102, 102)
+}
+.new-game:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaking Hand Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #hand {
+      width: 200px;
+      height: auto;
+      margin: 20px auto;
+      rotate:90deg;
+    }
+
+    /* Keyframes for shaking animation */
+    @keyframes shake {
+      25% { transform: rotate(-50deg); }
+      50% { transform: rotate(10deg); }
+    }
+
+    .shaking {
+      animation: shake 0.5s infinite; /* Shake repeatedly every 0.5 seconds */
+    }
+  </style>
+</head>
+<body>
+  <h1>Shaking Hand Animation</h1>
+  <img src="https://cdn-icons-png.flaticon.com/128/1527/1527451.png" alt="Hand" id="hand">
+
+  <button onclick="startShaking()">Shake for 3 Seconds</button>
+
+  <script>
+    const hand = document.getElementById('hand');
+
+    function startShaking() {
+      hand.classList.add('shaking'); // Start shaking
+      setTimeout(() => {
+        hand.classList.remove('shaking'); // Stop shaking after 3 seconds
+      }, 3000); // 3000 milliseconds = 3 seconds
+    }
+  </script>
+</body>
+</html>
